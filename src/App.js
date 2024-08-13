@@ -2,7 +2,7 @@ import About from './components/About';
 import './App.css';
 import Contact from './components/Contact';
 import Login from './components/Login';
-import Project from './components/Project';
+import ProjectList from './components/ProjectList';
 import Skills from './components/Skills';
 
 function App() {
@@ -12,7 +12,7 @@ function App() {
      <About />   
       <Contact /> 
       <Login /> 
-      <Project /> 
+      <ProjectList /> 
       <Skills />
 
     </div>
