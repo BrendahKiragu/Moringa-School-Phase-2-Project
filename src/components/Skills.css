@@ -1,12 +1,13 @@
 .skills-section {
-  background-color: #e4e1e1;
+  background-color: rgb(95, 123, 123);
   padding: 20px;
 }
 
 .skills-section h2 {
   text-align: center;
   margin-bottom: 20px;
-  background-color: #008073;
+  background-color: transparent ;
+  color: #fff;
   padding: 20px;
 }
 
@@ -15,6 +16,9 @@
   border: 2px solid transparent;
   transition: border-color 0.3s ease;
   background-color: #fff;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
 }
 
 .skills-category h3 {
@@ -31,11 +35,14 @@
   margin-bottom: 10px;
   text-align: center;
   transition: transform 0.3s ease;
+
+  flex: 1 0 20%;
+  margin: 10px;
 }
 
 .card img {
   width: 100px;
-  height: 100px;
+  height: auto;
 }
 
 .card figcaption {
@@ -45,7 +52,7 @@
 .card:hover {
   transform: scale(1.1);
   cursor: pointer;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); 
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); 
 }
 
 .skills-category:hover{
