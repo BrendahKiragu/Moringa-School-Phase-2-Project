@@ -1,0 +1,54 @@
+ .App{
+  background-color:  rgb(95, 123, 123);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.App .content {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.App .content .text {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.App .content img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+} and this .App {
+  background-color:  rgb(95, 123, 123);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.App h1 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.App p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.App img {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  margin-left: 20px;
+} 
