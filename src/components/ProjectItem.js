@@ -1,6 +1,6 @@
 import React from "react";
 
-function Project () {
+function ProjectItem () {
     return (
         <div>
         <ul>
@@ -12,4 +12,4 @@ function Project () {
     )
 }
 
-export default Project;
+export default ProjectItem;

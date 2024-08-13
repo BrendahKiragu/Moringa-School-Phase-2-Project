@@ -1,0 +1,24 @@
+import React from "react";
+import {Link} from "react-router-dom";
+import './NavBar.css';
+
+const NavBar = () => {
+    return (
+        <nav className="navbar">
+            <div className="container">
+                <div className="logo">
+                    <Link to="/">Thrive Tribe 3</Link>
+                </div>
+                <div>
+                    <Link to="/about" className="nav-link">About</Link>
+                    <Link to="/projectitem" className="nav-link">ProjectItem</Link>
+                    <Link to="/skills" className="nav-link">Skills</Link>
+                    <Link to="/contact" className="nav-link">Contact</Link>
+                    <Link to="/login" className="nav-link">Login</Link>
+                </div>
+            </div>
+        </nav>
+    )
+}
+
+export default NavBar;
