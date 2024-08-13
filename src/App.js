@@ -1,20 +1,14 @@
-import About from './components/About';
+// import NavBar from './components/NavBar';
 import './App.css';
-import Contact from './components/Contact';
-import Login from './components/Login';
-import ProjectList from './components/ProjectList';
-import Skills from './components/Skills';
+import profilepic from './components/images/profilepic.png'
 
 function App() {
   return (
     <div className="App">
-      
-     <About />   
-      <Contact /> 
-      <Login /> 
-      <ProjectList /> 
-      <Skills />
-
+      {/* <NavBar /> */}
+      <h1>Thriver Triver 03</h1>
+      <p>Full Stack Developer based in Nairobi, Kenya</p>
+      <img src={profilepic} alt="profilepic" />
     </div>
   );
 }
