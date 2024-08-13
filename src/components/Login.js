@@ -1,7 +1,7 @@
 import React,{useState} from "react";
 
 function Login () {
-    const [isLoggeIn, setIsLoggeIn] = useState(false)
+    const [isLoggedIn, setIsLoggeIn] = useState(false)
 
     const handleAuth = () => {
         setIsLoggeIn(!isLoggedIn)
