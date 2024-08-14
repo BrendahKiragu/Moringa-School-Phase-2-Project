@@ -20,7 +20,13 @@ const ProjectList = () => {
   }, []);
 
   const handleInputChange = (event) => {
-    setNewProject({ ...newProject, [event.target.name]: event.target.value });
+    const {name, value} = event.target;
+
+    if (name === 'languages' || name === 'authors'){
+      setNewProject({...newProject, [name]: value.split(',').map(input=>input.trim())});
+    }else{
+      setNewProject({...newProject, [name]: value});
+    }
   };
 
    const handleSubmit = (event) => {
