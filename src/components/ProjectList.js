@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import ProjectItem from './ProjectItem';
-import './ProjectItem.css'
+import './ProjectList.css'
+import Login from "./Login"
+
 
 const ProjectList = () => {
   const [projects, setProjects] = useState([]);
@@ -11,6 +13,9 @@ const ProjectList = () => {
     authors: [],
     image: '',
   });  
+
+const [showLoginForm, setShowLoginForm] = useState(false)
+
 
   useEffect(() => {
     fetch('http://localhost:4000/projects')
@@ -46,6 +51,9 @@ const ProjectList = () => {
       })
       .catch(error => console.error('Error posting project:', error));
   };
+  const toggleLoginForm = () => {
+    setShowLoginForm(!showLoginForm)
+  }
 
   return (
     <div className='project-list'>
@@ -56,7 +64,12 @@ const ProjectList = () => {
           <ProjectItem  project={project} />
          ))}
         </div>
-      </div>
+      </div>  
+      <button onClick={toggleLoginForm} className='toggle-login-button'> 
+        {showLoginForm ? "Hide Login" : "Show Login"}
+        </button>  
+        {showLoginForm && <Login />}  
+{/* <Login /> */}
       <form className='project-form' onSubmit={handleSubmit}>
         <input
           type="text"
