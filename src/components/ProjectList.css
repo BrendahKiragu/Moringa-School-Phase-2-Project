@@ -4,7 +4,7 @@
   }
   
   .project-items {
-    margin-top: 80px; /* Adjust based on navbar height */
+    margin-top: 80px;
     margin-bottom: 20px;
   }
   
@@ -16,7 +16,7 @@
     font-weight: bold;
     border-bottom: 4px solid #007bff;
     padding-bottom: 10px;
-    background-color: #ffffff; /* Optional: Add background color for better contrast */
+    background-color: #ffffff; 
     padding-left: 10px;
     padding-right: 10px;
   }
