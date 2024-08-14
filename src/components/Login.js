@@ -37,7 +37,7 @@ return (
           </label>
         </div>
         <button type="submit">Login</button>
-        <p>Kindly Log in</p>
+        <p>Kindly Log in To Our Portfolio</p>
       </form>
     )}
   </div>
