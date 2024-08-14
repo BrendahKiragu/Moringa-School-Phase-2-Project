@@ -53,13 +53,23 @@ const ProjectList = () => {
       .catch(error => console.error('Error posting project:', error));
   };
 
+   function handleDelete (project){
+    fetch(`http://localhost:4000/projects/${project.id}`, {
+      method: 'DELETE',
+    })
+     .then(() => {
+        setProjects(projects.filter(selectedproject => selectedproject.id !== project.id));
+      })
+     .catch(error => console.error('Error deleting project:', error));
+   }
+
   return (
     <div className='project-list'>
       <div className='project-items'>
         <h2>Our recent Projects</h2>
         <div>
           {projects.map((project) => (
-          <ProjectItem  project={project} />
+          <ProjectItem  project={project} handleDelete={handleDelete} />
          ))}
         </div>
       </div>
