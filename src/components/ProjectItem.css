@@ -4,6 +4,8 @@
   align-items: center;
   gap: 20px;
   padding: 20px;
+  margin-top: 60px;
+  position: sticky;
 }
 
 .project-items {
