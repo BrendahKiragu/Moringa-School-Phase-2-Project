@@ -62,6 +62,23 @@ const ProjectList = () => {
       })
      .catch(error => console.error('Error deleting project:', error));
    }
+  
+    function handleEdit (editedProject) {
+    fetch(`http://localhost:4000/projects/${editedProject.id}`, {
+      method: 'PUT',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(editedProject),
+    })
+      .then(response => response.json())
+      .then(updatedProject => {
+        setProjects(projects.map(project => 
+          project.id === updatedProject.id ? updatedProject : project
+        ));
+      })
+      .catch(error => console.error('Error editing project:', error));
+  } 
 
   return (
     <div className='project-list'>
@@ -69,7 +86,7 @@ const ProjectList = () => {
         <h2>Our recent Projects</h2>
         <div>
           {projects.map((project) => (
-          <ProjectItem  project={project} handleDelete={handleDelete} />
+          <ProjectItem  project={project} handleDelete={handleDelete} handleEdit={handleEdit}/>
          ))}
         </div>
       </div>
@@ -109,7 +126,7 @@ const ProjectList = () => {
           value={newProject.authors.join(', ')}
           onChange={handleInputChange}
         />
-        <button type="submit">Add Project</button>
+        <button className="project-buttons" type="submit">Add Project</button>
 
       </form>
     </div>
