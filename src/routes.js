@@ -10,11 +10,11 @@ const routes = [
         path: "/",
         element: <App />,
         children: [
-            { path: "/about", element: <About /> },
-            { path: "/projectitem", element: <ProjectItem /> },
-            { path: "/skills", element: <Skills /> },
-            { path: "/contact", element: <Contact /> },
-            { path: "/login", element: <Login /> }
+            { path: "about", element: <About /> },
+            { path: "projectitem", element: <ProjectItem /> },
+            { path: "skills", element: <Skills /> },
+            { path: "contact", element: <Contact /> },
+            { path: "login", element: <Login /> }
 
         ]
     }
