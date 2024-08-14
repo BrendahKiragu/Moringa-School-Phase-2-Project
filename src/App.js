@@ -1,5 +1,5 @@
 import './App.css';
-import profilepic from './components/images/profilepic.png'
+import profilepic from './components/images/profpic.avif'
 import './App.css';
 import NavBar from './components/NavBar';
 import { Outlet } from 'react-router-dom';

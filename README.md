@@ -1,70 +1,67 @@
-# Getting Started with Create React App
+# Thriver Coders 03 - Portfolio
+Welcome to the Thriver Coders 03 portfolio! This project showcases the skills and expertise of our software engineering team that is based in Nairobi, Kenya.
+
+# Table of Contents
+Project Overview
+Components
+Installation
+Usage
+Contributing
+License
+Contact
+
+# Project Overview
+This portfolio is built using Create React App and provides an insight into the capabilities of Thriver Coders 03. It highlights the skills, frameworks, and libraries we are proficient in, as well as the team members who contribute to our success.
+
+# Components
+ ## NavBar
+A navigation bar that allows users to navigate through different sections of the portfolio.
+
+ ## App
+The main component that serves as the entry point for the application.
+Displays a welcome message, the team's location, and a tagline.
+Includes a profile picture representing the team.
+
+ ## Skills
+A detailed section showcasing the various programming languages, frameworks, libraries, and tools the team is proficient in.
+Each skill is visually represented by an image with a caption.
+
+## About
+Provides an overview of the Thriver Coders 03 team.
+Introduces each team member, their roles, and a brief bio highlighting their expertise.
+Includes links to each member's GitHub and LinkedIn profiles.
+
+# Installation
+Clone the repository:
+ git clone https://github.com/yourusername/thriver-coders-portfolio.git
+ cd thriver-coders-portfolio.
+ Install dependencies:
+    npm install
+ Start the development server:
+   npm start
+
+# Usage
+Once the development server is running, you can view the portfolio by navigating to http://localhost:3000 in your web browser.
+Explore the different sections to learn more about our skills and team members.
+
+# Contributing
+We welcome contributions from anyone interested in enhancing the portfolio. To contribute, please follow these steps:
+
+1. Fork the repository.
+Create a new branch: git checkout -b feature-name
+
+2.Make your changes and commit them: git commit -m 'Add some feature'
+
+3. Push to the branch: git push origin feature-name
+4. Open a pull request.
+
+# License
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+# Contact
+For any inquiries or collaboration requests, please reach out to us:
+
+GitHub: Thriver Coders 03
+Email: contact@thrivercoders.com
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

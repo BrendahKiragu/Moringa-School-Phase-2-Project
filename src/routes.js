@@ -1,6 +1,6 @@
 import App from './App';
 import About from './components/About';
-import ProjectItem from './components/ProjectItem';
+import ProjectList from './components/ProjectList';
 import Skills from './components/Skills';
 import Contact from './components/Contact';
 import Login from './components/Login';
