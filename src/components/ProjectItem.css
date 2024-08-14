@@ -4,6 +4,8 @@
   align-items: center;
   gap: 20px;
   padding: 20px;
+  margin-top: 60px;
+  position: sticky;
 }
 
 .project-items {
@@ -19,7 +21,7 @@
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 20px;
-  width: calc(50% - 40px); 
+  width: calc(50% - 40px);
   text-align: center;
   margin-bottom: 30px;
 }
@@ -64,16 +66,17 @@
   border-radius: 5px;
 }
 
-.project-form button {
+.project-buttons {
   padding: 10px;
   background-color: #007bff;
   color: #fff;
   border-radius: 5px;
   font-size: 1rem;
+  margin-right: 25px;
   cursor: pointer;
 }
 
-.project-form button:hover {
+.project-buttons:hover {
   background-color: #0056b3;
 }
 

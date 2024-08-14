@@ -1,12 +1,23 @@
 import React,{useState} from "react";
 
-function Login() {
-    const [isLoggedIn, setIsLoggedIn] = useState(false);
-    const [username, setUsername] = useState(''); // Define username state
-    const [password, setPassword] = useState(''); // Define password state
+function Login () {
+    const [isLoggedIn, setIsLoggedIn] = useState(false)
+    const [username, setUsername] = useState('')
+    const [password, setPassword] = useState('')
 
-    const handleAuth = () => {
-        setIsLoggedIn(!isLoggedIn)
+    const handleAuth = (e) => {
+        e.preventDefault()
+        if(isLoggedIn) {
+            setIsLoggedIn(false)
+            setUsername('')
+            setPassword('')
+        } else {
+            if (username && password) { 
+                setIsLoggedIn(true)
+            } else {
+                alert("Kindly enter both username and password")
+            }
+        }
     }
 
 return (
@@ -39,11 +50,34 @@ return (
           </label>
         </div>
         <button type="submit">Login</button>
-        <p>Welcome To Our Portfolio</p>
+        <p>Kindly Log in</p>
       </form>
     )}
   </div>
 );
 }
       
+export default Login;
+import React,{useState} from "react";
+
+function Login () {
+    const [isLoggedIn, setIsLoggeIn] = useState(false)
+
+    const handleAuth = () => {
+        setIsLoggeIn(!isLoggedIn)
+    }
+    return (
+        <div>
+         <button onClick={handleAuth}>
+            {isLoggedIn ? "Logout" : "Login"}
+            </button> 
+            <p>{isLoggedIn ? "Welcome back!" :"Kindly Log in"}
+                </p>  
+        </div>
+        
+
+        
+    )
+}
+
 export default Login;
