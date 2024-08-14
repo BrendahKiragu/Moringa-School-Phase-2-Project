@@ -11,19 +11,30 @@ function ProjectItem({ project, handleEdit, handleDelete }) {
 
   function handleInputChange(event) {
     const { name, value } = event.target;
-    setEditedProject({ ...editedProject, [name]: value });
+
+    if (name === "languages" || name === "authors") {
+      setEditedProject({
+        ...editedProject,
+        [name]: value.split(",").map((input) => input.trim()),
+      });
+    } else {
+      setEditedProject({ ...editedProject, [name]: value });
+    }
   }
 
   function handleSaveButtonClick(e) {
     e.preventDefault();
-    handleEdit(editedProject);
-    setEditProject(false);
+
+    const confirmSaveChanges =window.confirm('Are you sure you want to save changes to this project?');
+    if (confirmSaveChanges) {
+      handleEdit(editedProject);
+      setEditProject(false);
+    }
   }
 
-  function handleSubmit(e) {
+  function handleUpdatedFormSubmit(e) {
     e.preventDefault();
-    handleEdit(editedProject);
-    setEditProject(false);
+    handleSaveButtonClick(e);
   }
 
   return (
@@ -35,7 +46,7 @@ function ProjectItem({ project, handleEdit, handleDelete }) {
       <p>Authors: {project.authors.join(", ")}</p>
 
       {editProject ? (
-        <form className="project-form" onSubmit={handleSubmit}>
+        <form className="project-form" onSubmit={handleUpdatedFormSubmit}>
           <input
             type="text"
             name="name"
