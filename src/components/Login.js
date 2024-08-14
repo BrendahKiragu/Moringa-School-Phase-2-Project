@@ -6,18 +6,42 @@ function Login () {
     const handleAuth = () => {
         setIsLoggeIn(!isLoggedIn)
     }
-    return (
+
+return (
+    <div>
+    {isLoggedIn ? (
+      <div>
+        <p>Welcome back, {username}!</p>
+        <button onClick={handleAuth}>Logout</button>
+      </div>
+    ) : (
+      <form onSubmit={handleAuth}>
         <div>
-         <button onClick={handleAuth}>
-            {isLoggedIn ? "Logout" : "Login"}
-            </button> 
-            <p>{isLoggedIn ? "Welcome back!" :"Kindly Log in"}
-                </p>  
+          <label>
+            Username:
+            <input
+              type="text"
+              value={username}
+              onChange={(e) => setUsername(e.target.value)}
+            />
+          </label>
         </div>
-        
-
-        
-    )
+        <div>
+          <label>
+            Password:
+            <input
+              type="password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+            />
+          </label>
+        </div>
+        <button type="submit">Login</button>
+        <p>Kindly Log in</p>
+      </form>
+    )}
+  </div>
+);
 }
-
+      
 export default Login;
