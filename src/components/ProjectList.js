@@ -1,96 +1,115 @@
-import React, { useState, useEffect } from 'react';
-import ProjectItem from './ProjectItem';
-import './ProjectItem.css'
+import React, { useState, useEffect } from "react";
+import ProjectItem from "./ProjectItem";
+import "./ProjectItem.css";
 
 const ProjectList = () => {
   const [projects, setProjects] = useState([]);
   const [newProject, setNewProject] = useState({
-    name: '',
-    description: '',
+    name: "",
+    description: "",
     languages: [],
     authors: [],
-    image: '',
-  });  
+    image: "",
+  });
 
   useEffect(() => {
-    fetch('http://localhost:4000/projects')
-      .then(response => response.json())
-      .then(data => setProjects(data))
-      .catch(error => console.error('Error fetching project data:', error));
+    fetch("http://localhost:4000/projects")
+      .then((response) => response.json())
+      .then((data) => setProjects(data))
+      .catch((error) => console.error("Error fetching project data:", error));
   }, []);
 
   const handleInputChange = (event) => {
-    const {name, value} = event.target;
+    const { name, value } = event.target;
 
-    if (name === 'languages' || name === 'authors'){
-      setNewProject({...newProject, [name]: value.split(',').map(input=>input.trim())});
-    }else{
-      setNewProject({...newProject, [name]: value});
+    if (name === "languages" || name === "authors") {
+      setNewProject({
+        ...newProject,
+        [name]: value.split(",").map((input) => input.trim()),
+      });
+    } else {
+      setNewProject({ ...newProject, [name]: value });
     }
   };
 
-   const handleSubmit = (event) => {
+  const handleSubmit = (event) => {
     event.preventDefault();
 
-    fetch('http://localhost:4000/projects', {
-      method: 'POST',
+    fetch("http://localhost:4000/projects", {
+      method: "POST",
       headers: {
-        'Content-Type': 'application/json',
+        "Content-Type": "application/json",
       },
       body: JSON.stringify(newProject),
     })
-      .then(response => response.json())
-      .then(data => {
+      .then((response) => response.json())
+      .then((data) => {
         setProjects([...projects, data]);
         setNewProject({
-          name: '',
-          description: '',
+          name: "",
+          description: "",
           languages: [],
           authors: [],
-          image: '',
+          image: "",
         });
       })
-      .catch(error => console.error('Error posting project:', error));
+      .catch((error) => console.error("Error posting project:", error));
   };
 
-   function handleDelete (project){
-    fetch(`http://localhost:4000/projects/${project.id}`, {
-      method: 'DELETE',
-    })
-     .then(() => {
-        setProjects(projects.filter(selectedproject => selectedproject.id !== project.id));
+  function handleDelete(project) {
+    const confirmDelete = window.confirm(
+      "Are you sure you want to delete this project"
+    );
+
+    if (confirmDelete) {
+      fetch(`http://localhost:4000/projects/${project.id}`, {
+        method: "DELETE",
       })
-     .catch(error => console.error('Error deleting project:', error));
-   }
-  
-    function handleEdit (editedProject) {
+        .then(() => {
+          setProjects(
+            projects.filter(
+              (selectedproject) => selectedproject.id !== project.id
+            )
+          );
+        })
+        .catch((error) => console.error("Error deleting project:", error));
+    }
+  }
+
+  function handleEdit(editedProject) {
     fetch(`http://localhost:4000/projects/${editedProject.id}`, {
-      method: 'PUT',
+      method: "PUT",
       headers: {
-        'Content-Type': 'application/json',
+        "Content-Type": "application/json",
       },
       body: JSON.stringify(editedProject),
     })
-      .then(response => response.json())
-      .then(updatedProject => {
-        setProjects(projects.map(project => 
-          project.id === updatedProject.id ? updatedProject : project
-        ));
+      .then((response) => response.json())
+      .then((updatedProject) => {
+        setProjects(
+          projects.map((project) =>
+            project.id === updatedProject.id ? updatedProject : project
+          )
+        );
       })
-      .catch(error => console.error('Error editing project:', error));
-  } 
+      .catch((error) => console.error("Error editing project:", error));
+  }
 
   return (
-    <div className='project-list'>
-      <div className='project-items'>
+    <div className="project-list">
+      <div className="project-items">
         <h2>Our recent Projects</h2>
         <div>
           {projects.map((project) => (
-          <ProjectItem  project={project} handleDelete={handleDelete} handleEdit={handleEdit}/>
-         ))}
+            <ProjectItem
+              project={project}
+              handleDelete={handleDelete}
+              handleEdit={handleEdit}
+            />
+          ))}
         </div>
       </div>
-      <form className='project-form' onSubmit={handleSubmit}>
+      <form className="project-form" onSubmit={handleSubmit}>
         <input
           type="text"
           name="name"
@@ -116,18 +135,19 @@ const ProjectList = () => {
           type="text"
           name="languages"
           placeholder="Languages (comma-separated)"
-          value={newProject.languages.join(', ')}
+          value={newProject.languages.join(", ")}
           onChange={handleInputChange}
         />
         <input
           type="text"
           name="authors"
           placeholder="Authors (comma-separated)"
-          value={newProject.authors.join(', ')}
+          value={newProject.authors.join(", ")}
           onChange={handleInputChange}
         />
-        <button className="project-buttons" type="submit">Add Project</button>
-
+        <button className="project-buttons" type="submit">
+          Add Project
+        </button>
       </form>
     </div>
   );
