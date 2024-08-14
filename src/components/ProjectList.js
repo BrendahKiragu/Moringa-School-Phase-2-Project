@@ -133,58 +133,11 @@ const ProjectList = () => {
           ))}
         </div>
       </div>
-      <form className="project-form" onSubmit={handleSubmit}>
-        <input
-          type="text"
-          name="name"
-          placeholder="Project Name"
-          value={newProject.name}
-          onChange={handleInputChange}
-        />
-        <input
-          type="text"
-          name="description"
-          placeholder="Project Description"
-          value={newProject.description}
-          onChange={handleInputChange}
-        />
-        <input
-          type="text"
-          name="image"
-          placeholder="Project Image URL"
-          value={newProject.image}
-          onChange={handleInputChange}
-        />
-        <input
-          type="text"
-          name="languages"
-          placeholder="Languages (comma-separated)"
-          value={newProject.languages.join(", ")}
-          onChange={handleInputChange}
-        />
-        <input
-          type="text"
-          name="authors"
-          placeholder="Authors (comma-separated)"
-          value={newProject.authors.join(", ")}
-          onChange={handleInputChange}
-        />
-        <button className="project-buttons" type="submit">
-          Add Project
-        </button>
-      </form>
-    <div className='project-list'>
-      <h2>Our recent Projects</h2>
-      <div className='project-items'>
-        {projects.map((project) => (
-          <ProjectItem  project={project} />
-        ))}
-      </div>
 
       {!isLoggedIn ? (
         <div className="login-section">
           <h3>Login to Add a Project</h3>
-          <form onSubmit={handleLogin}>
+          <form className="project-form" onSubmit={handleLogin}>
             <div>
               <label>
                 Username:
@@ -205,13 +158,13 @@ const ProjectList = () => {
                 />
               </label>
             </div>
-            {error && <p style={{ color: 'red' }}>{error}</p>}
-            <button type="submit">Login</button>
+            {error && <p style={{ color: 'red', marginBottom: '10px' }}>{error}</p>}
+            <button className="project-buttons" type="submit">Login</button>
           </form>
         </div>
     ) : (
       <>
-        <button onClick={handleLogout}>Logout</button>
+        <button className="project-buttons" onClick={handleLogout}>Logout</button>
         <form className='project-form' onSubmit={handleSubmit}>
           <h3>Add a New Project</h3>
           <input
@@ -220,6 +173,7 @@ const ProjectList = () => {
             placeholder="Project Name"
             value={newProject.name}
             onChange={handleInputChange}
+            required
           />
           <input
             type="text"
@@ -227,6 +181,7 @@ const ProjectList = () => {
             placeholder="Project Description"
             value={newProject.description}
             onChange={handleInputChange}
+            required
           />
           <input
             type="text"
@@ -234,6 +189,7 @@ const ProjectList = () => {
             placeholder="Project Image URL"
             value={newProject.image}
             onChange={handleInputChange}
+            required
           />
           <input
             type="text"
@@ -241,6 +197,7 @@ const ProjectList = () => {
             placeholder="Languages (comma-separated)"
             value={newProject.languages.join(', ')}
             onChange={handleInputChange}
+            required
           />
           <input
             type="text"
@@ -248,13 +205,14 @@ const ProjectList = () => {
             placeholder="Authors (comma-separated)"
             value={newProject.authors.join(', ')}
             onChange={handleInputChange}
+            required
           />
-          <button type="submit">Add Project</button>
+          <button className="project-buttons" type="submit">Add Project</button>
         </form>
       </>
     )}
     </div>
-    </div>
+    
   )};
 
 export default ProjectList;
