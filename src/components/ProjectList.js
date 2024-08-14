@@ -55,7 +55,7 @@ const ProjectList = () => {
     }
   };
 
-  const handleSubmit = (event) => {
+ 
   const handleSubmit = (event) => {
     event.preventDefault();
 
@@ -254,7 +254,7 @@ const ProjectList = () => {
       </>
     )}
     </div>
-  );
-};
+    </div>
+  )};
 
 export default ProjectList;
