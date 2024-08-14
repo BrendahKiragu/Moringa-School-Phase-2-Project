@@ -1,10 +1,12 @@
 import React,{useState} from "react";
 
-function Login () {
-    const [isLoggedIn, setIsLoggeIn] = useState(false)
+function Login() {
+    const [isLoggedIn, setIsLoggedIn] = useState(false);
+    const [username, setUsername] = useState(''); // Define username state
+    const [password, setPassword] = useState(''); // Define password state
 
     const handleAuth = () => {
-        setIsLoggeIn(!isLoggedIn)
+        setIsLoggedIn(!isLoggedIn)
     }
 
 return (

@@ -1,4 +1,5 @@
 import App from './App';
+import Home from './components/Home';
 import About from './components/About';
 import ProjectList from './components/ProjectList';
 import Skills from './components/Skills';
@@ -10,8 +11,9 @@ const routes = [
         path: "/",
         element: <App />,
         children: [
+            { index: true, element: <Home /> },
             { path: "about", element: <About /> },
-            { path: "projectitem", element: <ProjectItem /> },
+            { path: "projectlist", element: <ProjectList /> },
             { path: "skills", element: <Skills /> },
             { path: "contact", element: <Contact /> },
             { path: "login", element: <Login /> }
