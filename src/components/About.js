@@ -8,6 +8,12 @@ import profile4 from './images/profile4.jpeg'
 
 function About() {
     return (
+        <>
+        <div class="about-section">
+        <h1>About Us Page</h1>
+        <p>Our expertise lies in software engineering, where we design and develop robust systems that meet the evolving needs of modern businesses.</p>
+        <p>With a strong foundation in cutting-edge technologies, we deliver tailored software solutions that drive efficiency and innovation.</p>
+      </div>
       <div className="about-container">
         <h2>Meet Our Team</h2>
         <div className="profile-section">
@@ -55,6 +61,7 @@ function About() {
           </div>
         </div>
       </div>
+      </>
     );
   }
   
