@@ -46,8 +46,4 @@ return (
 );
 }
       
-<<<<<<< HEAD
 export default Login;
-=======
-export default Login;
->>>>>>> parent of 78d76e9 (Resolve merge conflicts and complete merge)
