@@ -1,7 +1,7 @@
 {
   "projects": [
     {
-      "id": 1,
+      "id": "1",
       "name": "Portfolio Website",
       "description": "A personal portfolio website showcasing web development skills and projects.",
       "languages": [
@@ -16,7 +16,7 @@
       "image": "https://example.com/portfolio-website.png"
     },
     {
-      "id": 2,
+      "id": "2",
       "name": "Task Management App",
       "description": "A web app to manage daily tasks and to-do lists with category filters.",
       "languages": [
@@ -31,7 +31,7 @@
       "image": "https://example.com/task-management-app.png"
     },
     {
-      "id": 3,
+      "id": "3",
       "name": "Movie Theater App",
       "description": "An application for booking movie tickets and viewing showtimes.",
       "languages": [
@@ -47,7 +47,7 @@
       "image": "https://example.com/movie-theater-app.png"
     },
     {
-      "id": 4,
+      "id": "4",
       "name": "Free Read Hub",
       "description": "A hub for accessing and reading a variety of free books online.",
       "languages": [
@@ -68,7 +68,7 @@
       "languages": [],
       "authors": [],
       "image": "",
-      "id": 5
+      "id": "5"
     }
   ]
 }
