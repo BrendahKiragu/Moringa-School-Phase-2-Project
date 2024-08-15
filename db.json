@@ -2,21 +2,6 @@
   "projects": [
     {
       "id": 1,
-      "name": "Portfolio Website",
-      "description": "A personal portfolio website showcasing web development skills and projects.",
-      "languages": [
-        "HTML",
-        "CSS",
-        "Flask"
-      ],
-      "authors": [
-        "Brendah",
-        "Dennis"
-      ],
-      "image": "https://example.com/portfolio-website.png"
-    },
-    {
-      "id": 2,
       "name": "Task Management App",
       "description": "A web app to manage daily tasks and to-do lists with category filters.",
       "languages": [
@@ -28,7 +13,23 @@
         "Komfort",
         "Kevin"
       ],
-      "image": "https://example.com/task-management-app.png"
+      "image": "./images/img7.jpeg"
+    },
+    {
+      "id": 2,
+      "name": "Portfolio Website",
+      "description": "A personal portfolio website showcasing web development skills and projects.",
+      "languages": [
+        "HTML",
+        "CSS",
+        "Flask",
+        "React"
+      ],
+      "authors": [
+        "Brendah",
+        "Dennis"
+      ],
+      "image": "./images/img6.jpeg"
     },
     {
       "id": 3,
@@ -44,10 +45,10 @@
         "Kevin",
         "Brendah"
       ],
-      "image": "https://example.com/movie-theater-app.png"
+      "image": "./images/img8.png"
     },
     {
-      "id": 4,
+      "id": "4",
       "name": "Free Read Hub",
       "description": "A hub for accessing and reading a variety of free books online.",
       "languages": [
@@ -60,15 +61,7 @@
         "Komfort",
         "Dennis"
       ],
-      "image": "https://example.com/free-read-hub.png"
-    },
-    {
-      "name": "",
-      "description": "",
-      "languages": [],
-      "authors": [],
-      "image": "",
-      "id": 5
+      "image": "./images/img9.jpeg"
     }
   ]
 }
