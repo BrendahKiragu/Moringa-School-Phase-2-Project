@@ -1,34 +1,33 @@
-import React,{useState} from "react";
+import React, { useState } from "react";
+import "./ProjectItem.css";
+import "./ProjectList.css";
 
-function Login () {
-    const [isLoggedIn, setIsLoggedIn] = useState(false)
-    const [username, setUsername] = useState('')
-    const [password, setPassword] = useState('')
+function Login({ setIsLoggedIn }) {
+  const [username, setUsername] = useState(""); // Define username state
+  const [password, setPassword] = useState(""); // Define password state
+  const [error, setError] = useState("");
 
-    const handleAuth = (e) => {
-        e.preventDefault()
-        if(isLoggedIn) {
-            setIsLoggedIn(false)
-            setUsername('')
-            setPassword('')
-        } else {
-            if (username && password) { 
-                setIsLoggedIn(true)
-            } else {
-                alert("Kindly enter both username and password")
-            }
-        }
+  const handleAuth = (event) => {
+    event.preventDefault();
+
+    // Regular expression to check for letters and numbers
+    const regex = /^[a-zA-Z0-9]+$/;
+
+    if (regex.test(username) && regex.test(password)) {
+      // If both username and password pass the validation
+      setIsLoggedIn(true);
+      setError(""); // Clear any previous error messages
+    } else {
+      // If the validation fails, show an error message
+      setError(
+        "Invalid username or password. Please use only letters and numbers."
+      );
     }
+  };
 
-return (
+  return (
     <div>
-    {isLoggedIn ? (
-      <div>
-        <p>Welcome back, {username}!</p>
-        <button onClick={handleAuth}>Logout</button>
-      </div>
-    ) : (
-      <form onSubmit={handleAuth}>
+      <form className="project-form" onSubmit={handleAuth}>
         <div>
           <label>
             Username:
@@ -49,12 +48,12 @@ return (
             />
           </label>
         </div>
-        <button type="submit">Login</button>
-        <p>Kindly Log in</p>
+        {error && <p style={{ color: "red" }}>{error}</p>}
+        <button className="project-buttons" type="submit">Login</button>
+        
       </form>
-    )}
-  </div>
-);
+    </div>
+  );
 }
-      
+
 export default Login;

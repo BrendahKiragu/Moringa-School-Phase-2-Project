@@ -32,7 +32,7 @@
       "image": "./images/img6.jpeg"
     },
     {
-      "id": 3,
+      "id": "3",
       "name": "Movie Theater App",
       "description": "An application for booking movie tickets and viewing showtimes.",
       "languages": [

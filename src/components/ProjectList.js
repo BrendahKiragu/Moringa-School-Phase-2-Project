@@ -10,7 +10,7 @@ const ProjectList = () => {
     description: "",
     languages: [],
     authors: [],
-    image: '',
+    image: "",
   });
 
   const [username, setUsername] = useState('');
@@ -34,7 +34,9 @@ const ProjectList = () => {
       setError('');
       setShowLoginForm(false); 
     } else {
-      setError('Invalid username or password. Please use only letters and numbers.');
+      setError(
+        "Invalid username or password. Please use only letters and numbers."
+      );
     }
   };
 
@@ -56,6 +58,7 @@ const ProjectList = () => {
       setNewProject({ ...newProject, [name]: value });
     }
   };
+
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -104,7 +107,7 @@ const ProjectList = () => {
         })
         .catch((error) => console.error("Error deleting project:", error));
     }
-  }
+  };
 
   function handleEdit(editedProject) {
     if (!isLoggedIn) {
@@ -113,7 +116,7 @@ const ProjectList = () => {
     }
 
     fetch(`http://localhost:4000/projects/${editedProject.id}`, {
-      method: "PUT",
+      method: "PATCH",
       headers: {
         "Content-Type": "application/json",
       },
