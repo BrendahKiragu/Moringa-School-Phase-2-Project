@@ -1,11 +1,6 @@
 import React, { useState, useEffect } from "react";
 import ProjectItem from "./ProjectItem";
-import "./ProjectItem.css";
-import React, { useState, useEffect } from 'react';
-import ProjectItem from './ProjectItem';
-import './ProjectList.css'
-import Login from "./Login"
-
+import "./ProjectList.css";
 
 const ProjectList = () => {
   const [projects, setProjects] = useState([]);
@@ -21,10 +16,7 @@ const ProjectList = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
-  });  
-
-const [showLoginForm, setShowLoginForm] = useState(false)
-
+  const [showLoginForm, setShowLoginForm] = useState(false); 
 
   useEffect(() => {
     fetch("http://localhost:4000/projects")
@@ -40,6 +32,7 @@ const [showLoginForm, setShowLoginForm] = useState(false)
     if (regex.test(username) && regex.test(password)) {
       setIsLoggedIn(true);
       setError('');
+      setShowLoginForm(false); 
     } else {
       setError('Invalid username or password. Please use only letters and numbers.');
     }
@@ -49,7 +42,7 @@ const [showLoginForm, setShowLoginForm] = useState(false)
     setIsLoggedIn(false);
     setUsername('');
     setPassword('');
-};
+  };
 
   const handleInputChange = (event) => {
     const { name, value } = event.target;
@@ -64,7 +57,6 @@ const [showLoginForm, setShowLoginForm] = useState(false)
     }
   };
 
- 
   const handleSubmit = (event) => {
     event.preventDefault();
 
@@ -90,8 +82,13 @@ const [showLoginForm, setShowLoginForm] = useState(false)
   };
 
   function handleDelete(project) {
+    if (!isLoggedIn) {
+      alert('Please log in to delete a project.');
+      return;
+    }
+
     const confirmDelete = window.confirm(
-      "Are you sure you want to delete this project"
+      "Are you sure you want to delete this project?"
     );
 
     if (confirmDelete) {
@@ -101,7 +98,7 @@ const [showLoginForm, setShowLoginForm] = useState(false)
         .then(() => {
           setProjects(
             projects.filter(
-              (selectedproject) => selectedproject.id !== project.id
+              (selectedProject) => selectedProject.id !== project.id
             )
           );
         })
@@ -110,6 +107,11 @@ const [showLoginForm, setShowLoginForm] = useState(false)
   }
 
   function handleEdit(editedProject) {
+    if (!isLoggedIn) {
+      alert('Please log in to edit a project.');
+      return;
+    }
+
     fetch(`http://localhost:4000/projects/${editedProject.id}`, {
       method: "PUT",
       headers: {
@@ -127,29 +129,18 @@ const [showLoginForm, setShowLoginForm] = useState(false)
       })
       .catch((error) => console.error("Error editing project:", error));
   }
-  const toggleLoginForm = () => {
-    setShowLoginForm(!showLoginForm)
-  }
 
   return (
     <div className="project-list">
-      <div className="project-items">
-        <h2>Our recent Projects</h2>
-        <div>
-          {projects.map((project) => (
-            <ProjectItem
-              project={project}
-              handleDelete={handleDelete}
-              handleEdit={handleEdit}
-            />
-          ))}
-        </div>
-      </div>
-
-      {!isLoggedIn ? (
-        <div className="login-section">
-          <h3>Login to Add a Project</h3>
-          <form className="project-form" onSubmit={handleLogin}>
+      <h2>Our Recent Projects</h2>
+      {!isLoggedIn && !showLoginForm && (
+        <button className="login-toggle" onClick={() => setShowLoginForm(true)}>
+          Login
+        </button>
+      )}
+      {showLoginForm && (
+        <div className="login-form-container">
+          <form onSubmit={handleLogin}>
             <div>
               <label>
                 Username:
@@ -170,106 +161,70 @@ const [showLoginForm, setShowLoginForm] = useState(false)
                 />
               </label>
             </div>
-            {error && <p style={{ color: 'red', marginBottom: '10px' }}>{error}</p>}
-            <button className="project-buttons" type="submit">Login</button>
+            {error && <p className="error-message">{error}</p>}
+            <button type="submit">Login</button>
           </form>
         </div>
-    ) : (
-      <>
-        <button className="project-buttons" onClick={handleLogout}>Logout</button>
-        <form className='project-form' onSubmit={handleSubmit}>
-          <h3>Add a New Project</h3>
-          <input
-            type="text"
-            name="name"
-            placeholder="Project Name"
-            value={newProject.name}
-            onChange={handleInputChange}
-            required
-          />
-          <input
-            type="text"
-            name="description"
-            placeholder="Project Description"
-            value={newProject.description}
-            onChange={handleInputChange}
-            required
-          />
-          <input
-            type="text"
-            name="image"
-            placeholder="Project Image URL"
-            value={newProject.image}
-            onChange={handleInputChange}
-            required
-          />
-          <input
-            type="text"
-            name="languages"
-            placeholder="Languages (comma-separated)"
-            value={newProject.languages.join(', ')}
-            onChange={handleInputChange}
-            required
-          />
-          <input
-            type="text"
-            name="authors"
-            placeholder="Authors (comma-separated)"
-            value={newProject.authors.join(', ')}
-            onChange={handleInputChange}
-            required
-          />
-          <button className="project-buttons" type="submit">Add Project</button>
-        </form>
-      </>
-    )}
-      </div>  
-      <button onClick={toggleLoginForm} className='toggle-login-button'> 
-        {showLoginForm ? "Hide Login" : "Show Login"}
-        </button>  
-        {showLoginForm && <Login />}  
-{/* <Login /> */}
-      <form className='project-form' onSubmit={handleSubmit}>
-        <input
-          type="text"
-          name="name"
-          placeholder="Project Name"
-          value={newProject.name}
-          onChange={handleInputChange}
-        />
-        <input
-          type="text"
-          name="description"
-          placeholder="Project Description"
-          value={newProject.description}
-          onChange={handleInputChange}
-        />
-        <input
-          type="text"
-          name="image"
-          placeholder="Project Image URL"
-          value={newProject.image}
-          onChange={handleInputChange}
-        />
-        <input
-          type="text"
-          name="languages"
-          placeholder="Languages (comma-separated)"
-          value={newProject.languages.join(', ')}
-          onChange={handleInputChange}
-        />
-        <input
-          type="text"
-          name="authors"
-          placeholder="Authors (comma-separated)"
-          value={newProject.authors.join(', ')}
-          onChange={handleInputChange}
-        />
-        <button type="submit">Add Project</button>
+      )}
 
-      </form>
+      {isLoggedIn && (
+        <>
+          <button className="logout-button" onClick={handleLogout}>Logout</button>
+          <form className="project-form" onSubmit={handleSubmit}>
+            <h3>Add a New Project</h3>
+            <input
+              type="text"
+              name="name"
+              placeholder="Project Name"
+              value={newProject.name}
+              onChange={handleInputChange}
+            />
+            <input
+              type="text"
+              name="description"
+              placeholder="Project Description"
+              value={newProject.description}
+              onChange={handleInputChange}
+            />
+            <input
+              type="text"
+              name="image"
+              placeholder="Project Image URL"
+              value={newProject.image}
+              onChange={handleInputChange}
+            />
+            <input
+              type="text"
+              name="languages"
+              placeholder="Languages (comma-separated)"
+              value={newProject.languages.join(', ')}
+              onChange={handleInputChange}
+            />
+            <input
+              type="text"
+              name="authors"
+              placeholder="Authors (comma-separated)"
+              value={newProject.authors.join(', ')}
+              onChange={handleInputChange}
+            />
+            <button type="submit">Add Project</button>
+          </form>
+        </>
+      )}
+
+      <div className="project-items">
+        {projects.map((project) => (
+          <ProjectItem
+            key={project.id}
+            project={project}
+            handleDelete={handleDelete}
+            handleEdit={handleEdit}
+            isLoggedIn={isLoggedIn}
+          />
+        ))}
+      </div>
     </div>
-    
-  )};
+  );
+};
 
 export default ProjectList;
