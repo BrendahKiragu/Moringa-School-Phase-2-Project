@@ -1,11 +1,15 @@
 import React, { useState } from "react";
 import "./ProjectItem.css";
 
-function ProjectItem({ project, handleEdit, handleDelete }) {
+function ProjectItem({ project, handleEdit, handleDelete, isLoggedIn }) {
   const [editProject, setEditProject] = useState(false);
   const [editedProject, setEditedProject] = useState({ ...project });
 
   function handleEditButtonClick() {
+    if (!isLoggedIn) {
+      alert('Please log in to edit a project.');
+      return;
+    }
     setEditProject(true);
   }
 
@@ -25,7 +29,7 @@ function ProjectItem({ project, handleEdit, handleDelete }) {
   function handleSaveButtonClick(e) {
     e.preventDefault();
 
-    const confirmSaveChanges =window.confirm('Are you sure you want to save changes to this project?');
+    const confirmSaveChanges = window.confirm('Are you sure you want to save changes to this project?');
     if (confirmSaveChanges) {
       handleEdit(editedProject);
       setEditProject(false);
@@ -37,12 +41,23 @@ function ProjectItem({ project, handleEdit, handleDelete }) {
     handleSaveButtonClick(e);
   }
 
+  function handleDeleteButtonClick() {
+    if (!isLoggedIn) {
+      alert('Please log in to delete a project.');
+      return;
+    }
+    const confirmDelete = window.confirm('Are you sure you want to delete this project?');
+    if (confirmDelete) {
+      handleDelete(project);
+    }
+  }
+
   return (
     <div className="project-card" key={project.id}>
       <img className="project-image" src={project.image} alt={project.name} />
       <h3>Title: {project.name}</h3>
       <p>Description: {project.description}</p>
-      <p> Languages: {project.languages.join(", ")}</p>
+      <p>Languages: {project.languages.join(", ")}</p>
       <p>Authors: {project.authors.join(", ")}</p>
 
       {editProject ? (
@@ -78,7 +93,7 @@ function ProjectItem({ project, handleEdit, handleDelete }) {
             onChange={handleInputChange}
           />
           <button
-            className="project-buttons"
+            className="project-buttons edit"
             type="submit"
             onClick={handleSaveButtonClick}
           >
@@ -86,13 +101,15 @@ function ProjectItem({ project, handleEdit, handleDelete }) {
           </button>
         </form>
       ) : (
-        <button className="project-buttons" onClick={handleEditButtonClick}>
-          Edit Project
-        </button>
+        <>
+          <button className="project-buttons edit" onClick={handleEditButtonClick}>
+            Edit Project
+          </button>
+          <button className="project-buttons delete" onClick={handleDeleteButtonClick}>
+            Delete
+          </button>
+        </>
       )}
-      <button className="project-buttons" onClick={() => handleDelete(project)}>
-        Delete
-      </button>
     </div>
   );
 }
