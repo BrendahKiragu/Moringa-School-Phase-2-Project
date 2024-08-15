@@ -1,23 +1,12 @@
 import React,{useState} from "react";
 
-function Login () {
-    const [isLoggedIn, setIsLoggedIn] = useState(false)
-    const [username, setUsername] = useState('')
-    const [password, setPassword] = useState('')
+function Login() {
+    const [isLoggedIn, setIsLoggedIn] = useState(false);
+    const [username, setUsername] = useState(''); // Define username state
+    const [password, setPassword] = useState(''); // Define password state
 
-    const handleAuth = (e) => {
-        e.preventDefault()
-        if(isLoggedIn) {
-            setIsLoggedIn(false)
-            setUsername('')
-            setPassword('')
-        } else {
-            if (username && password) { 
-                setIsLoggedIn(true)
-            } else {
-                alert("Kindly enter both username and password")
-            }
-        }
+    const handleAuth = () => {
+        setIsLoggedIn(!isLoggedIn)
     }
 
 return (
@@ -50,11 +39,15 @@ return (
           </label>
         </div>
         <button type="submit">Login</button>
-        <p>Kindly Log in</p>
+        <p>Welcome To Our Portfolio</p>
       </form>
     )}
   </div>
 );
 }
       
+<<<<<<< HEAD
 export default Login;
+=======
+export default Login;
+>>>>>>> parent of 78d76e9 (Resolve merge conflicts and complete merge)
