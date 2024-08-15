@@ -1,93 +1,81 @@
-.project-list {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 20px;
-  padding: 20px;
-  margin-top: 60px;
-  position: sticky;
-}
-
-.project-items {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
-  width: 100%;
-}
-
 .project-card {
   background-color: #ffffff;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
   padding: 20px;
-  width: calc(50% - 40px);
-  text-align: center;
-  margin-bottom: 30px;
-}
-
-.project-card img.project-image {
-  border-radius: 10px;
   width: 100%;
-  height: 200px;
-  object-fit: cover;
-  margin-bottom: 20px;
+  max-width: 800px;
+  text-align: center;
 }
 
-.project-card h3 {
-  font-size: 1.5rem;
-  color: #333;
-  margin-bottom: 10px;
-  font-weight: bold;
-  text-transform: uppercase;
+.project-image {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+.project-card h3,
+.project-card p {
+  margin: 10px 0;
 }
 
 .project-card p {
-  font-size: 1rem;
-  color: #555;
-  margin-bottom: 15px;
-  line-height: 1.5;
+  font-size: 0.9rem;
+  color: #6c757d;
 }
 
 .project-form {
-  background-color: #f0f4f8;
-  border-radius: 10px;
+  margin-top: 20px;
+  background-color: white;
   padding: 20px;
-  width: 100%;
-  max-width: 600px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .project-form input {
-  width: calc(100% - 20px);
+  width: 100%;
   padding: 10px;
-  margin-bottom: 15px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-}
-
-.project-buttons {
-  padding: 10px;
-  background-color: #007bff;
-  color: #fff;
+  margin-bottom: 10px;
+  border: 1px solid #ced4da;
   border-radius: 5px;
   font-size: 1rem;
-  margin-right: 25px;
+}
+
+.project-form input:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+/* Base styling for buttons */
+.project-buttons {
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 5px;
   cursor: pointer;
+  margin: 5px;
+  display: inline-block;
+  text-align: center;
 }
 
-.project-buttons:hover {
-  background-color: #0056b3;
+/* Edit button styling */
+.project-buttons.edit {
+  background-color: #0ecbaf; /* Yellow for edit */
+  color: black;
 }
 
-@media (max-width: 768px) {
-  .project-card {
-    width: calc(50% - 20px);
-  }
+.project-buttons.edit:hover {
+  background-color: #3ef1d6;
 }
 
-@media (max-width: 480px) {
-  .project-card {
-    width: calc(100% - 20px);
-  }
+/* Delete button styling */
+.project-buttons.delete {
+  background-color: #dc3545; /* Red for delete */
+  color: white;
 }
+
+.project-buttons.delete:hover {
+  background-color: #c82333;
+}
+
