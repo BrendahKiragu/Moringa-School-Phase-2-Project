@@ -2,7 +2,7 @@
   "projects": [
     {
       "id": 1,
-      "name": "Task Management App",
+      "name": "Weater App",
       "description": "A web app to manage daily tasks and to-do lists with category filters.",
       "languages": [
         "Bootstrap",
@@ -13,23 +13,7 @@
         "Komfort",
         "Kevin"
       ],
-      "image": "./images/img7.jpeg"
-    },
-    {
-      "id": 2,
-      "name": "Portfolio Website",
-      "description": "A personal portfolio website showcasing web development skills and projects.",
-      "languages": [
-        "HTML",
-        "CSS",
-        "Flask",
-        "React"
-      ],
-      "authors": [
-        "Brendah",
-        "Dennis"
-      ],
-      "image": "./images/img6.jpeg"
+      "image": "https://plus.unsplash.com/premium_photo-1720551256983-445d23d516b2?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     },
     {
       "id": "3",
