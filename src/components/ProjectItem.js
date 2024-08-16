@@ -46,10 +46,8 @@ function ProjectItem({ project, handleEdit, handleDelete, isLoggedIn }) {
       alert('Please log in to delete a project.');
       return;
     }
-    const confirmDelete = window.confirm('Are you sure you want to delete this project?');
-    if (confirmDelete) {
       handleDelete(project);
-    }
+    
   }
 
   return (
