@@ -1,17 +1,14 @@
-/* General Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
   }
   
-  /* Body Styling */
   body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
   }
   
-  /* Container for Project List */
   .project-list {
     padding: 80px 20px; 
     background-color: #f8f9fa; 
@@ -20,7 +17,6 @@
     width: 100%; 
   }
   
-  /* Heading Styling */
   .project-list h2 {
     font-size: 2.5rem;
     color: #343a40;
@@ -29,16 +25,14 @@
     font-weight: bold;
   }
   
-  /* Login Section Styling */
   .login-section {
     display: flex;
     justify-content: center;
     margin-bottom: 20px; 
   }
   
-  /* Login Toggle Button Styling */
   .login-toggle {
-    background-color: #007bff; /* Blue background */
+    background-color: #007bff;
     color: white;
     padding: 10px 20px;
     border: none;
@@ -54,7 +48,6 @@
     transform: scale(1.05);
   }
   
-  /* Login Form Container */
   .login-form-container {
     margin: 30px auto; 
     padding: 25px; 
@@ -65,7 +58,6 @@
     width: 100%; 
   }
   
-  /* Login Form Inputs */
   .login-form-container input {
     padding: 12px; 
     border: 1px solid #ced4da;
@@ -76,14 +68,12 @@
     margin-bottom: 15px; 
   }
   
-  /* Input Focus State */
   .login-form-container input:focus {
     border-color: #007bff; 
     outline: none; 
     box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25); 
   }
   
-  /* Login Button */
   .login-form-container button {
     background-color: #007bff; 
     color: white;
@@ -102,7 +92,6 @@
     transform: scale(1.05); 
   }
   
-  /* Error Message Styling */
   .error-message {
     color: #dc3545; 
     font-size: 0.875rem; 
@@ -110,7 +99,6 @@
     margin-top: 10px; 
   }
   
-  /* Logout Button Styling */
   .logout-button {
     display: block;
     margin: 20px auto;
@@ -130,7 +118,6 @@
     transform: scale(1.05);
   }
   
-  /* Project Form Styling */
   .project-form {
     display: flex;
     flex-direction: column;
@@ -174,7 +161,6 @@
     transform: scale(1.05);
   }
   
-  /* Project Items Container */
   .project-items {
     display: flex;
     flex-direction: column; 
@@ -221,7 +207,6 @@
     margin-bottom: 10px;
   }
   
-  /* Responsive Adjustments */
   @media (max-width: 768px) {
     .project-items {
       flex-direction: column;
