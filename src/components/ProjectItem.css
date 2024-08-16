@@ -47,7 +47,6 @@
   outline: none;
 }
 
-/* Base styling for buttons */
 .project-buttons {
   border: none;
   padding: 10px 20px;
@@ -59,9 +58,8 @@
   text-align: center;
 }
 
-/* Edit button styling */
 .project-buttons.edit {
-  background-color: #0ecbaf; /* Yellow for edit */
+  background-color: #0ecbaf; 
   color: black;
 }
 
@@ -69,9 +67,8 @@
   background-color: #3ef1d6;
 }
 
-/* Delete button styling */
 .project-buttons.delete {
-  background-color: #dc3545; /* Red for delete */
+  background-color: #dc3545; 
   color: white;
 }
 
