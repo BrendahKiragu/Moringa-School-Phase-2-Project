@@ -22,7 +22,7 @@
 
 .about-container {
   max-width: 1200px;
-  margin: 40px auto 0; 
+  margin: 80px ; 
   padding: 40px 20px;
   text-align: center;
   background: linear-gradient(135deg, #f8f9fa, #e9ecef);
@@ -48,8 +48,6 @@
   align-items: center;
   width: 100%; 
 }
-
-
 
 .profile {
   background-color: white;
@@ -116,6 +114,10 @@
     flex-wrap: wrap;
     justify-content: center;
   }
+   .about-container {
+    padding: 20px;
+    margin: 150px; 
+  }
 
   .profile {
     flex: 1 1 300px;
@@ -125,9 +127,12 @@
 @media (max-width: 767px) {
   .about-container {
     padding: 20px;
-    margin-top: 60px; 
+    margin: 80px; 
   }
 
+.about-section h1{
+  margin-top: 30px;
+}
   .profile h3 {
     font-size: 1.25rem;
   }

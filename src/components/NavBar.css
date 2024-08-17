@@ -44,7 +44,7 @@
     color: blue;
 }
 
-.nav-link {
+.nav-link:active {
     font-weight: 600;
 }
 

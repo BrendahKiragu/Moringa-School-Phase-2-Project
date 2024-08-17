@@ -59,7 +59,7 @@
 }
 
 .project-buttons.edit {
-  background-color: #0ecbaf; 
+  background-color: #0ecbaf;
   color: black;
 }
 
@@ -68,7 +68,7 @@
 }
 
 .project-buttons.delete {
-  background-color: #dc3545; 
+  background-color: #dc3545;
   color: white;
 }
 
@@ -80,6 +80,7 @@
 @media (max-width: 767px) {
   .project-card {
     padding: 15px;
+    margin-bottom: 100px;
   }
 
   .project-image {
@@ -112,6 +113,7 @@
 @media (min-width: 768px) {
   .project-card {
     padding: 20px;
+    margin-bottom: 100px;
   }
 
   .project-image {

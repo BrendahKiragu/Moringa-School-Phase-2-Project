@@ -2,7 +2,7 @@
   "projects": [
     {
       "id": "1",
-      "name": "Weater App",
+      "name": "Weather Tracking App",
       "description": "A web app to manage daily tasks and to-do lists with category filters.",
       "languages": [
         "Bootstrap",
@@ -13,7 +13,7 @@
         "Komfort",
         "Kevin"
       ],
-      "image": "https://plus.unsplash.com/premium_photo-1720551256983-445d23d516b2?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+      "image": "https://plus.unsplash.com/premium_photo-1677593850639-9f1e14e4524b?q=80&w=1780&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     },
     {
       "id": "3",
@@ -29,7 +29,7 @@
         "Kevin",
         "Brendah"
       ],
-      "image": "./images/img8.png"
+      "image": "https://plus.unsplash.com/premium_photo-1710409625244-e9ed7e98f67b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     },
     {
       "id": "4",
@@ -45,7 +45,21 @@
         "Komfort",
         "Dennis"
       ],
-      "image": "./images/img9.jpeg"
+      "image": "https://plus.unsplash.com/premium_photo-1676575893806-985f71a3ebd7?q=80&w=1916&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    },
+    {
+      "id": "f7b7",
+      "name": "Task Manager for Devs",
+      "description": "An app to organize day-to-day tasks.",
+      "languages": [
+        "React",
+        "CSS",
+        "Git"
+      ],
+      "authors": [
+        "Brendah"
+      ],
+      "image": "https://plus.unsplash.com/premium_photo-1677340725081-e81626d96e29?q=80&w=1780&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     }
   ]
 }
