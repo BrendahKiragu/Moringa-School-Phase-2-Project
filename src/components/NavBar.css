@@ -1,9 +1,9 @@
 /* NavBar.css */
 
 .navbar {
-    background-color: #1a1a1a;
+    background-color: rgb(70, 90, 90);
     color: #fff;
-    padding: 1rem 2rem;
+    padding: 0.8rem 2rem;
     position: fixed;
     width: 100%;
     top: 0;
@@ -20,11 +20,14 @@
 }
 
 .logo h1 {
-    font-size: 1.8rem;
+    font-size: 1rem;
     margin: 0;
     line-height: 1;
     text-transform: uppercase;
     letter-spacing: 2px;
+    padding: 5px;
+    border: double;
+    border-color: rgb(8, 187, 86);
     font-weight: 700;
 }
 
@@ -38,14 +41,13 @@
 }
 
 .navbar a:hover {
-    color: #f0a500;
+    color: blue;
 }
 
 .nav-link {
     font-weight: 600;
 }
 
-/* Responsive Styles */
 @media (max-width: 768px) {
     .container {
         flex-direction: column;
@@ -53,7 +55,7 @@
     }
     
     .logo h1 {
-        font-size: 1.5rem;
+        font-size: 1rem;
         margin-bottom: 1rem;
     }
     
@@ -66,7 +68,7 @@
     }
 
     .navbar a:hover {
-        color: #f0a500;
+        color: blue;
         background-color: rgba(255, 255, 255, 0.1);
         border-radius: 5px;
     }

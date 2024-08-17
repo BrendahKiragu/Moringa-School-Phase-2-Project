@@ -1,4 +1,69 @@
 .skills-section {
+  background-color: white;
+  padding: 20px;
+  width: 100%; 
+}
+
+.skills-section h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  background-color: transparent ;
+  color: #fff;
+  padding: 20px;
+ 
+}
+
+.skills-category {
+  margin-bottom: 20px;
+  border: 2px solid transparent;
+  transition: border-color 0.3s ease;
+  background-color: #fff;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  width: 100%;
+  padding-right: 10px;
+}
+
+.skills-category h3 {
+  margin-bottom: 10px;
+  font-size: 24px;
+  color: rgb(15, 15, 230);
+  text-align: center;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.card {
+  display: inline-block;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  text-align: center;
+  transition: transform 0.3s ease;
+  /* width: 50%; */
+  flex: 1 0 20%;
+  margin: 10px;
+}
+
+.card img {
+  width: 100px;
+  height: auto;
+}
+
+.card figcaption {
+  font-size: 14px;
+}
+
+.card:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); 
+}
+
+.skills-category:hover{
+  border-color: #008073 ;
+}
+
+.skills-section {
   background-color: rgb(95, 123, 123);
   padding: 20px;
 }
@@ -9,6 +74,7 @@
   background-color: transparent ;
   color: #fff;
   padding: 20px;
+  display: block; /* Add this line */
 }
 
 .skills-category {
@@ -57,4 +123,60 @@
 
 .skills-category:hover{
   border-color: #008073 ;
+}
+
+/* Media query for screens with a maximum width of 767px */
+@media (max-width: 767px) {
+  .skills-section {
+    padding: 55px;
+  }
+
+  .skills-section h2 {
+    padding: 15px;
+    display: block;
+  }
+
+  .skills-category {
+    flex-wrap: wrap;
+  }
+
+  .card {
+    flex: 1 0 45%;
+  }
+
+  .card img {
+    width: 80px;
+  }
+
+  .card figcaption {
+    font-size: 12px;
+  }
+}
+
+/* Media query for screens with a minimum width of 768px */
+@media (min-width: 768px) {
+  .skills-section {
+    padding: 20px;
+  }
+
+  .skills-section h2 {
+    display: block;
+    padding: 20px;
+  }
+
+  .skills-category {
+    flex-wrap: nowrap;
+  }
+
+  .card {
+    flex: 1 0 20%;
+  }
+
+  .card img {
+    width: 100px;
+  }
+
+  .card figcaption {
+    font-size: 14px;
+  }
 }

@@ -21,6 +21,7 @@
     font-size: 2.5rem;
     color: #343a40;
     text-align: center;
+    margin-top: 20px;
     margin-bottom: 40px;
     font-weight: bold;
   }
@@ -207,40 +208,75 @@
     margin-bottom: 10px;
   }
   
-  @media (max-width: 768px) {
-    .project-items {
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    .project-item {
-      max-width: 100%; 
-    }
+ /* Media query for screens with a maximum width of 767px */
+@media (max-width: 767px) {
+  .project-list {
+    padding: 40px 15px;
   }
-  
-  @media (max-width: 480px) {
-    .project-form {
-      padding: 15px;
-    }
-  
-    .project-form input {
-      padding: 8px;
-    }
-  
-    .project-form button {
-      padding: 10px;
-    }
-  
-    .login-form-container {
-      padding: 20px;
-    }
-  
-    .login-form-container input {
-      padding: 10px;
-    }
-  
-    .login-form-container button {
-      padding: 12px;
-    }
+
+  .project-list h2 {
+    margin-top: 100px;
+    font-size: 2rem;
+    margin-bottom: 20px;
   }
-  
+
+  .login-form-container {
+    padding: 15px;
+  }
+
+  .project-form {
+    padding: 15px;
+  }
+
+  .project-item {
+    max-width: 250px;
+  }
+
+  .project-item img {
+    max-height: 150px;
+  }
+
+  .project-item h4 {
+    font-size: 1.1rem;
+  }
+
+  .project-item p {
+    font-size: 0.9rem;
+  }
+}
+
+/* Media query for screens with a minimum width of 768px */
+@media (min-width: 768px) {
+  .project-list {
+    padding: 80px 20px;
+  }
+
+  .project-list h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+  }
+
+  .login-form-container {
+    padding: 20px;
+  }
+
+  .project-form {
+    padding: 20px;
+  }
+
+  .project-item {
+    max-width: 300px;
+  }
+
+  .project-item img {
+    max-height: 200px;
+  }
+
+  .project-item h4 {
+    font-size: 1.25rem;
+  }
+
+  .project-item p {
+    font-size: 1rem;
+  }
+} 
