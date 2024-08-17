@@ -1,4 +1,5 @@
 # Thriver Coders 03 - Portfolio
+
 Thriver Coders 03 is a portfolio created to showcase the coding prowess of a team of 4 Software Developers based in Nairobi, Kenya.
 
 Our team has created an impressive collection of projects that showcase their skills in various domains, including Front-End-Development, Back-End-Development, and Web Design.
@@ -6,20 +7,23 @@ Our team has created an impressive collection of projects that showcase their sk
 By exploring the projects in this portfolio, you will gain a deeper understanding of the team's technical expertise and their ability to deliver high-quality, innovative solutions.
 
 # Table of Contents
-1. *Project Overview*  
-2. *Getting Started*  
-3. *Project Structure*
-4. *Features*
-5. *API Endpoints*
-6. *Contributing*
-7. *License*
-8. *Contact*
-9. *Acknowledgements*
+
+1. _Project Overview_
+2. _Getting Started_
+3. _Project Structure_
+4. _Features_
+5. _API Endpoints_
+6. _Contributing_
+7. _License_
+8. _Contact_
+9. _Acknowledgements_
 
 # Project Overview
+
 This portfolio is built using Create React App and provides an insight into the capabilities of Thriver Coders 03. It highlights the skills, frameworks, and libraries we are proficient in, as well as the team members who contribute to our success.
 
 # Getting Started
+
 1. Clone the repository: git clone https://github.com/kiprono234/Thrive-Tribe-Group-Three-Portfolio
 2. Navigate to the project directory: cd project-management-app
 3. Install dependencies: npm install
@@ -27,43 +31,47 @@ This portfolio is built using Create React App and provides an insight into the 
 
 # Project Structure
 
-   - *public/index.html:* The main HTML file for the application.
-   - *src/App.js:* The main component of the application.
-   - *src/components/ProjectList.js:* Contains the logic for fetching, displaying, adding, editing, and deleting projects.
-   - *src/components/ProjectItem.js:* Displays individual project details and allows editing or deleting a project.
-   - *src/components/ProjectList.css:* Contains CSS styles for the project list and project items.
+- _public/index.html:_ The main HTML file for the application.
+- _src/App.js:_ The main component of the application.
+- _src/components/ProjectList.js:_ Contains the logic for fetching, displaying, adding, editing, and deleting projects.
+- _src/components/ProjectItem.js:_ Displays individual project details and allows editing or deleting a project.
+- _src/components/ProjectList.css:_ Contains CSS styles for the project list and project items.
 
 # Features
-   1. Fetching projects from a RESTful API endpoint (http://localhost:4000/projects).
-   2. Displaying a list of projects with their details.
-   3. Adding a new project by submitting a form.
-   4. Editing an existing project by clicking on its details and making changes.
-   5. Deleting a project by clicking on the delete button.
-   6. Implementing a login system to restrict certain actions (editing and deleting projects) to authorized users.
-   7. Validating username and password inputs using regular expressions.
-   8. Displaying error messages for invalid inputs.
 
- # API Endpoints
- The JSON server runs on the following end points:
-   - **GET** http://localhost:4000/projects: Fetch a list of all projects.
-   - **POST** http://localhost:4000/projects: Add a new project.
-   - **DELETE** http://localhost:4000/projects/:id: Delete a project by its ID.
-   - **PATCH** http://localhost:4000/projects/:id: Update an existing project by its ID.
+1.  Fetching projects from a RESTful API endpoint (http://localhost:4000/projects).
+2.  Displaying a list of projects with their details.
+3.  Adding a new project by submitting a form.
+4.  Editing an existing project by clicking on its details and making changes.
+5.  Deleting a project by clicking on the delete button.
+6.  Implementing a login system to restrict certain actions (editing and deleting projects) to authorized users.
+7.  Validating username and password inputs using regular expressions.
+8.  Displaying error messages for invalid inputs.
+
+# API Endpoints
+
+The JSON server runs on the following end points:
+
+- **GET** http://localhost:4000/projects: Fetch a list of all projects.
+- **POST** http://localhost:4000/projects: Add a new project.
+- **DELETE** http://localhost:4000/projects/:id: Delete a project by its ID.
+- **PATCH** http://localhost:4000/projects/:id: Update an existing project by its ID.
 
 # Contributing
+
 We welcome contributions from anyone interested in enhancing the portfolio. To contribute, please follow these steps:
 
 1. Fork the repository.
    Create a new branch: git checkout -b feature-name
-   
-2. Make your changes and commit them. 
-  git commit -m 'Add some feature'
+2. Make your changes and commit them.
+   git commit -m 'Add some feature'
 
 3. Push to the branch: git push origin feature-name.
 
 4. Open a pull request.
 
 # License
+
 This project is licensed under the MIT License.
 
 Copyright (c) 2024 Thriver Coders 03
@@ -87,11 +95,15 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
 # Contact
+
 For any inquiries or collaboration requests, please reach out to any of the authors:
- Brendah Kiragu:[ brendakiragu](https://github.com/BrendahKiragu) /
- Dennis Kipkurui: [dennisKipkurui](https://github.com/) /
- Komfort Kimko: [komfortkimko](https://github.com/the1kimko) /
- Kevin Kiprono: [kevinkiprono](https://github.com/kiprono234)
+Brendah Kiragu:[ brendakiragu](https://github.com/BrendahKiragu) /
+Dennis Kipkurui: [dennisKipkurui](https://github.com/) /
+Komfort Kimko: [komfortkimko](https://github.com/the1kimko) /
+Kevin Kiprono: [kevinkiprono](https://github.com/kiprono234)
 
 # Acknowledgements:
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+Photos used in this portfolio are from [Unsplash.com](https://unsplash.com/).
